@@ -1,0 +1,7 @@
+let num_a = 10;
+let num_b = 20;
+
+console.log("Soma>", num_a + num_b);
+console.log("Subtração>", num_a - num_b);
+console.log("Multiplicação>", num_a * num_b);
+console.log("Divisão>", num_a / num_b);
