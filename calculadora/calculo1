@@ -1,7 +1,65 @@
-let num_a = 10;
-let num_b = 20;
+// const prompt = require("prompt-sync")();
+// let num_a = 0;
+// let num_b = 0;
+// console.log("Soma>", num_a + num_b);
+// console.log("Subtração>", num_a - num_b);
+// console.log("Multiplicação>", num_a * num_b);
+// console.log("Divisão>", num_a / num_b);
 
-console.log("Soma>", num_a + num_b);
-console.log("Subtração>", num_a - num_b);
-console.log("Multiplicação>", num_a * num_b);
-console.log("Divisão>", num_a / num_b);
+// prompt  ("Digite o primeiro número: ", (input) { 
+//     num_a = parseFloat(input);
+// }
+// prompt  ("Digite o segundo número: ", (input){
+//     num_b = parseFloat(input);
+// }
+// console.log("Escolha uma operação:", (input) {
+//     console.log("1. Soma");
+//     console.log("2. Subtração");
+//     console.log("3. Multiplicação");
+//     console.log("4. Divisão");
+// }
+// if (input === "1") {
+//     console.log("Resultado da soma:", num_a + num_b);
+// } else if (input === "2") {
+//     console.log("Resultado da subtração:", num_a - num_b);
+// } else if (input === "3") {
+//     console.log("Resultado da multiplicação:", num_a * num_b);
+// } else if (input === "4") {
+//     console.log("Resultado da divisão:", num_a / num_b);
+// } else {
+//     console.log("Operação inválida.");
+// }
+
+const prompt = require("prompt-sync")();
+
+let num_a = parseFloat(prompt("Digite o primeiro número: "));
+let num_b = parseFloat(prompt("Digite o segundo número: "));
+
+console.log("Escolha uma operação:");
+console.log("1. Soma");
+console.log("2. Subtração");
+console.log("3. Multiplicação");
+console.log("4. Divisão");
+
+let operacao = prompt("Digite o número da operação: ");
+
+if (operacao === "1") {
+    console.log("Resultado da soma:", num_a + num_b);
+} else if (operacao === "2") {
+    console.log("Resultado da subtração:", num_a - num_b);
+} else if (operacao === "3") {
+    console.log("Resultado da multiplicação:", num_a * num_b);
+} else if (operacao === "4") {
+    if (num_b !== 0) {
+        console.log("Resultado da divisão:", num_a / num_b);
+    } else {
+        console.log("Erro: divisão por zero!");
+    }
+} else {
+    console.log("Operação inválida.");
+    console.log("Escolha uma operação:");
+    console.log("1. Soma");
+    console.log("2. Subtração");
+    console.log("3. Multiplicação");
+    console.log("4. Divisão");
+}
