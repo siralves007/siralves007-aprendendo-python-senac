@@ -4,35 +4,27 @@
 prompt = require('prompt-sync')();
 
 let nota = parseFloat(prompt("Digite a nota do aluno (0-100): ")); 
-let travesao = "---------------------------------";
+let travesao = "------------------------------------------------";
 
 console.log(travesao);
 
-if (nota >= 90) // avalia a nota e imprime o conceito
-    console.log("Você recebeu a nota A - Aprovado");
-else if (nota >= 80)    
-    console.log("Você recebeu a nota B - Aprovado");
-else if (nota >= 70)
-    console.log("Você recebeu a nota C - Aprovado");
-else if (nota >= 60)
-    console.log("Você recebeu a nota D - Recuperação");
-else if (nota < 60)
-    console.log("Você recebeu a nota F - Reprovado");
-else
+if (nota > 100 || nota < 0) // verifica se a nota é válida
     console.log("Nota inválida. Por favor, insira uma nota entre 0 e 100.");
 
-let proximoConceito; // calcula quantos pontos faltam para o próximo conceito
-if (nota < 60) {
-    proximoConceito = 60;
-}
-else if (nota < 70) {
-    proximoConceito = 70;
-}
-else if (nota < 80) {
-    proximoConceito = 80;
-}
-else if (nota < 90) {
-    proximoConceito = 90;
-} 
+else if (nota >= 90) // avalia a nota e imprime o conceito e qual foi a diferença para o próximo conceito
+    console.log(`Você recebeu ${nota} pontos. Atingindo o conteito A e está aprovado. 
+        Você está no topo!`);
+else if (nota >= 80)    
+    console.log(`Você recebeu ${nota} pontos. Atingindo o conteito B - Aprovado
+Faltaram ${90 - nota} ponto(s) para o próximo conceito.`);
+else if (nota >= 70)
+    console.log(`Você recebeu ${nota} pontos. Atingindo o conteito C - Aprovado
+Faltaram ${80 - nota} ponto(s) para o próximo conceito.`);
+else if (nota >= 60)
+    console.log(`Você recebeu ${nota} pontos. Atingindo o conteito - Recuperação
+Faltaram ${70 - nota} ponto(s) para o próximo conceito.`);
+else if (nota < 60)
+    console.log(`Você recebeu ${nota} ponto(s). Atingindo o conteito - Reprovado
+Faltaram ${60 - nota} ponto(s) para o próximo conceito.`);
 
-console.log(`Faltaram ${proximoConceito - nota} ponto(s) para o próximo conceito.`);
+console.log(travesao);
