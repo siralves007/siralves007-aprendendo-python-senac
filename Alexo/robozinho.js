@@ -15,7 +15,7 @@ let usuario = prompt("Digite seu nome: ");
 
 function comeco(usuario) { // função do menu inicial
     return `________________________________
-Olá, ${usuario}, para lembrar frases marcantes de Todo Mundo Odeia o Chris
+Olá, ${usuario}, estou aqui para lembrar frases marcantes de Todo Mundo Odeia o Chris
 [1] Greg
 [2] Rochelle
 [3] Julius
