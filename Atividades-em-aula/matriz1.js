@@ -2,8 +2,8 @@ function somaMatrizes(m1, m2) {
     let resultado = [];
     for (let i = 0; i < 3; i++) {
         resultado[i] = [];
-        for (let j = 0; j < 3; j++) {
-            resultado[i][j] = m1[i][j] + m2[i][j];
+    for (let j = 0; j < 3; j++) {
+        resultado[i][j] = m1[i][j] + m2[i][j];
         }
     }
     return resultado;
